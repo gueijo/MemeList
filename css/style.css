@@ -1,0 +1,879 @@
+:root {
+  --background-color: #fefefe;
+  --dark-btn: #111;
+  --text-color: #000;
+  --text-color2: #fff;
+  --ball: #fff;
+  --back-btn: #232c35;
+  --header: #cdcdcd;
+}
+.body {
+  overflow-x: hidden;
+  background-color: var(--background-color);
+  color: var(--text-color);
+  
+}
+
+.back-btn a {
+  color: var(--text-color2);
+}
+.back-btn {
+  position: relative;
+  top: 10px;
+  left: 925px;
+
+  width: 60px;
+  height: 20px;
+  background: var(--back-btn);
+  border-radius: 10px;
+
+  padding: 7.5px 0 5px 15px;
+
+}
+
+.checkbox {
+ opacity: 0;
+ position: absolute;
+}
+
+.label2 {
+  background-color: var(--dark-btn);
+  border-radius: 50px;
+  cursor: pointer;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  position: relative;
+  top: -7px;
+  left: 0;
+
+  padding: 5px;
+  position: relative;
+  height: 26px;
+  width: 50px;
+
+  transform: scale(1.5);
+  
+}
+
+.label2 .ball {
+  background-color: var(--ball);
+  border-radius: 50%;
+  position: absolute;
+  top: 2px;
+  left: 2px;
+
+  height: 32px;
+  width: 32px;
+
+  transform: translateX(0px);
+  transition: transform 0.2s linear;
+
+}
+
+.checkbox:checked + .label2 .ball {
+  transform: translateX(24px);
+}
+
+.fa-moon {
+  color: #f1c40f;
+}
+
+.fa-sun {
+  color: #f39c12 ;
+}
+  
+  
+  /* Header */
+    a{
+      text-decoration: none;
+    }
+
+    .header {
+      padding-inline: 16px;
+      background-color: var(--header);
+    }
+    .nav {
+      max-width: 1280px;
+      height: 70px;
+      margin-inline: auto;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    
+    .logo {
+      margin: 0 0 0 0px;
+      display: flex;
+      align-items: center;
+      width: 167px;
+      height: 39px;
+      flex-shrink: 0;
+      color: #426B1F;
+      font-feature-settings: 'clig' off, 'liga' off;
+      font-family: Newsreader;
+      font-size: 38px;
+      font-style: normal;
+      font-weight: 500;
+      line-height: 100%; /* 38px */
+      letter-spacing: -0.38px;
+      padding: 0 0 0 0;
+    }
+
+    .nav-list{
+      display: flex;
+      gap: 32px;
+      list-style: none;
+      height: 20px;
+    }
+
+    .nav-list a {
+      font-size: 20px;
+      padding-block: 16px;
+    }
+    .nav-list a {
+      color: #426B1F;
+    }
+  
+    .nav-list li:nth-child(3) {
+     color: #ffffff;
+     text-align: center;
+     font-feature-settings: 'clig' off, 'liga' off;
+     font-family: Inter;
+     font-size: 20px;
+     font-style: normal;
+     font-weight: 400;
+     line-height: 130%; /* 20.8px */
+     display: inline-flex;
+     height: 10px;
+     padding: 8.5px 10px;
+     justify-content: center;
+     align-items: center;
+     margin: 0 0 10px 10px;
+     border-radius: 4px;
+     background: #426B1F;
+     transition: .3s;
+     }
+     .nav-list li:nth-child(3):hover {
+       background: #253b11;
+     }
+     #add_meme {
+       color: var(--text-color2);
+       text-align: center;
+       font-feature-settings: 'clig' off, 'liga' off;
+       font-family: Inter;
+       font-size: 16px;
+       font-style: normal;
+       font-weight: 600;
+       line-height: 130%; /* 20.8px */
+     }
+
+    .hamburguer {
+      display: none;
+      border: none;
+      background: none ;
+      border-top: 3px solid #fff;
+      cursor: pointer;
+    }
+    .hamburguer::before,
+    .hamburguer::after {
+      content: " ";
+      display: block;
+      width: 30px;
+      height: 3px;
+      background: #fff;
+      margin-top: 5px;
+      position: relative;
+      transition: 0.3s;
+    }
+  
+  
+  /* Home */
+  
+  .welcome {
+      font-size: 64px;
+      text-align: center;
+      font-weight: 400;
+      position: absolute;
+      top: 279px;
+      left: 527px;
+  }
+  .list-btn {
+      position: absolute;
+      width: 227px;
+      height: 64px;
+      top: 481px;
+      left: 825px;
+      border-radius: 8px;
+      background-color: #426b1f;
+      color: #ffffff;
+      font-size: 26px;
+      text-align: center;
+      font-weight: 600;
+      transition: .5s ease;
+  }
+  .list-btn:hover {
+      cursor: pointer;
+      background-color: #253b11;
+  }
+  .bttv-emotes {
+    z-index: -1;
+    position: relative;
+    width: 870px;
+    animation: memes infinite alternate 7s;
+  }
+  .img-container img{
+    position: relative;
+    width: 50px;
+    height: 50px;
+  }
+  .m1 {
+    animation: sim1 infinite alternate .4s;
+  }
+  
+  .m2 {
+    animation: sim2 infinite alternate .4s;
+  }
+  
+  @keyframes memes {
+    0% {
+        top: -100px;
+        left: -500px;
+    }
+    45% { 
+      rotate: 20deg;
+      top: 540px;
+      left: 450px;
+    }
+    65% {
+      rotate: -20deg;
+      top: 540px;
+      left: 450px;
+    }
+    100%{
+      top: -100px;
+      left: 1920px;
+    }
+  }
+  
+  @keyframes sim1 {
+    0% {
+      top: 10px;
+    }
+    100% {
+      top: -10px;
+    }
+  }
+  @keyframes sim2 {
+    0% {
+      top: -10px;
+    }
+    100% {
+      top: 10px;
+    }
+  }
+  
+  /* List */
+  
+  #title-list {
+    position: relative;
+    top: 56px;
+    left: 317.5px;
+    font-feature-settings: 'clig' off, 'liga' off;
+    font-family: Newsreader;
+    font-size: 64px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 120%; /* 76.8px */
+    letter-spacing: -1.28px;
+  }
+  
+  .line {
+    position: relative;
+    top: 40px;
+    left: 317.5px;
+    width: 1248px;
+    height: 2px;
+    background: #E6E6E6;
+    box-shadow: 0px 2px 4px 0px rgba(0, 0, 0, 0.25);
+  }
+  
+  .table {
+    position: relative;
+    left: 400px;
+    top: 50px;
+  }
+  .delete-btn {
+    border-radius: 5px;
+    background-color: #426b1f;
+    color: #E6E6E6;
+    position: relative;
+    left: 1000px;
+    top: -112px;
+  }
+  
+  .meme-list {
+    margin: 25px 0;
+    padding: 12px 0 0 0;
+    width: 1045px;
+    height: 96px;
+    background-color: #E6E6E6;
+    border-radius: 10px;
+    font-feature-settings: 'clig' off, 'liga' off;
+    font-family: Inter;
+    font-size: 22px;
+    font-style: normal;
+    font-weight: 300;
+  }
+  
+  .meme-list .col2 {
+    font-size: 26px;
+    display: inline;
+    padding: 0 0 0 136px;
+    position: relative;
+    top: -85px;
+    left: 16px;
+  }
+  
+  .meme-list a {
+    text-decoration: none;
+    color: #000;
+  }
+  
+  /* vid list */
+  .col .testes {
+    position: relative;
+    top: -12px;
+    left: 0px;
+  }
+  .testes a img{
+    border-radius: 10px;
+    width: 145px;
+    height: 108px;
+  }
+  /* SHOW */
+  
+  .title-video-meme{
+    margin-top: 20px;
+    font-size:64px;
+    text-align:center;
+    width: 100%;
+  }
+  
+  .content-video-meme{
+    width: 100%;
+    display:flex;
+    justify-content:center;
+    flex-direction:column;
+    margin-bottom:30px;
+  }
+  
+  .video-meme{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  margin: 50px 0 100px 0;
+  
+  }
+  
+  .mostrar img{
+    height:100px;
+    width: 130px;
+  }
+  
+  .link-view-meme{
+  display:flex;
+  align-items:center;
+  gap:30px;
+  }
+  
+  .content-video-meme{
+  display:flex;
+  align-items: center;
+  flex-direction:column;
+  width:400px;
+  height: 700;
+  gap:30px;
+  }
+  
+  .content-video-meme{
+  display:flex;
+  /*background:green;*/
+  width: 100%;
+  }
+  
+  .twitter-tweet{
+  
+    position: relative;
+    top: 47px;
+    left: 0px;
+  
+    width: 890px;
+    border-radius:10px;
+    overflow:hidden;
+  }
+  
+  .tiktok-embed{
+  
+    position: relative;
+    top: 47px;
+    left: 0%;
+    height:555px;
+    width: 900px;
+    border-radius:10px;
+    overflow:hidden;
+  }
+  
+  .youtube-meme {
+    position: relative;
+    top: 47px;
+    left: 0%;
+    height:500px;
+    width: 890px;
+    border-radius:10px;
+    overflow:hidden;
+  }
+  
+  /* CREATE */
+  #global .line {
+    top: 62px;
+    left: 0;
+  }
+  .contain-texto-dois {
+    text-align: center;
+     
+   }
+   
+   .texto2 {
+     font-size: 54px; 
+     margin-bottom: 40px;
+   }
+   
+   .borda {
+     width: 1248px; 
+     height: 0px; 
+     margin-bottom: 40px;
+   
+   }
+   
+   .nameMeme {
+     width: 100%;
+      height: 100%; 
+      flex-direction: column; 
+      justify-content: flex-start; 
+      align-items: flex-start; 
+      gap: 8px; 
+      display: inline-flex
+   }
+   
+   .texto3 {
+     position: relative;
+     top: 100px;
+     left: 0;
+     align-self: stretch;
+       font-size: 28px; 
+       font-family: Comic Neue; 
+       font-weight: 400; 
+       line-height: 16px; 
+       word-wrap: break-word;
+       margin-bottom: 10px;
+   }
+   
+   .nomeMeme {
+     position: relative;
+     top: 100px;
+     left: 0;
+     width: 737px; 
+    padding: 332px , 607px, 598px, 96px;
+    padding-top: 8px; 
+    padding-bottom: 8px; 
+    padding-left: 16px; 
+    background: #EEEEEE; 
+    
+     
+   }
+   
+   .nome {
+     font-size: 16px; 
+     font-family: Comic Neue; 
+     font-weight: 400; 
+     line-height: 20px;
+      word-wrap: break-word;
+   }
+   .texto4 {
+     position: relative;
+     top: 100px;
+     left: 0;
+     align-self: stretch;
+     font-size: 18px; 
+     font-family: Comic Neue; 
+     font-weight: 400; 
+     line-height: 20px; 
+     word-wrap: break-word;
+   }
+   
+   .linkMeme {
+     width: 100%;
+      height: 100%; 
+      flex-direction: column; 
+      justify-content: flex-start; 
+      align-items: flex-start; 
+      gap: 8px; display: inline-flex;
+   }
+   
+   .linkName {
+     position: relative;
+     bottom: 100px;
+     left: 0;
+     align-self: stretch;
+     font-size: 28px; 
+     font-family: Comic Neue; 
+     font-weight: 400; 
+     line-height: 16px; 
+     word-wrap: break-word;
+    
+     
+   }
+   
+   .pesquisa {
+     position: relative;
+     bottom: 100px;
+     left: 0;
+     width: 737px; 
+     padding-top: 8px; 
+     padding-bottom: 8px; 
+     padding-left: 16px; 
+     background: #EEEEEE; 
+     justify-content: flex-start; 
+     align-items: center; 
+     display: inline-flex;
+   }
+   
+   .texto5 {
+     font-size: 16px; 
+     font-family: Comic Neue; 
+     font-weight: 400; 
+     line-height: 20px; 
+     word-wrap: break-word;
+   }
+   
+   .link {
+     position: relative;
+     bottom: 100px;
+     left: 0;
+     align-self: stretch;
+     font-size: 18px; 
+     font-family: Comic Neue; 
+     font-weight: 400; 
+     line-height: 20px; 
+     word-wrap: break-word;
+   }
+   
+   .texto6 {
+   
+     font-size: 28px; 
+     font-family: Comic Neue; 
+     font-weight: 400; 
+     line-height: 16px; 
+     word-wrap: break-word;
+     
+     margin-bottom: 20px;
+   }
+   .fotinho { 
+     width: 300px;
+     height: 150px;
+   }
+   
+   .texto7 {
+     width: 100%; 
+     height: 100%;
+     font-size: 18px; 
+     font-family: Comic Neue; 
+     font-weight: 400; 
+     line-height: 20px; 
+     word-wrap: break-word;
+     margin-bottom: 20px;
+     
+   }
+ 
+   .contain-btn-create{
+     margin-top: 30px;
+     display: flex;
+     justify-content: center;
+   }
+   
+   .buttonMeme {
+     text-align: center;
+     color: #FFF;
+     padding: 17.5px 15px 18.5px 10px;
+     border-radius: 4px;
+     background: #426B1F;
+     border: #000000 solid 2px;
+     margin-bottom: 50px;
+   }
+   
+   #global {
+     margin-top: 100px;
+     display: flex;
+     justify-content: space-around;
+     align-items: center;
+     flex-wrap: wrap;
+   }
+   
+   #contain-form{
+     padding: 0 100px;
+   }
+ 
+ 
+/* MOBILE */
+
+@media (max-width: 767px) {
+  
+  /* Header */
+  
+.back-btn {
+  top: 10px;
+  left: 175px;
+
+
+}
+  .label2 {
+    position: fixed;
+    top: 835px;
+    left: 180px;
+  }
+    .hamburguer {
+      display: block;
+      z-index: 100;
+    }
+    .nav-list{
+      z-index: -1;
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100vw;
+      height: 225vw;
+      background-color: #426B1F;
+      clip-path: circle(100px at 90% -15%);
+      transition: 1s ease-out;
+
+      flex-direction: column;
+      justify-content: space-around;
+      align-items: center;
+      gap: 0;
+      pointer-events: none;
+    }
+    .nav-list a {
+      font-size: 24px;
+      opacity: 0;
+    }
+    .nav-list li:nth-child(1) a {
+      transition: .5s .2s;
+    }
+    .nav-list li:nth-child(2) a {
+      transition: .5s .4s;
+    }
+    .nav-list li:nth-child(3) a {
+      transition: .5s .6s;
+    }
+    .nav-list li:nth-child(4) a {
+      transition: .5s .8s;
+    }
+    .nav.active .nav-list {
+      z-index: 1;
+      clip-path: circle(1500px at 90% -15%);
+      pointer-events: all;
+    }
+    .nav.active .nav-list a {
+      opacity: 1;
+    }
+    .nav.active .hamburguer {
+      position: fixed;
+      top: 26px;
+      right: 16px;
+      border-top-color: transparent;
+    }
+    .nav.active .hamburguer::before {
+      transform: rotate(135deg);
+    }.nav.active .hamburguer::after {
+      transform: rotate(-135deg);
+      top: -7px;
+    }
+  
+  /* Home */
+  
+  .welcome {
+      font-size: 51px;
+      text-align: center;
+      font-weight: 400;
+      display: flex;
+      width: 300px;
+      justify-content: center;
+      align-content: center;
+      margin: -52px 0 0 -465px;
+  }
+  a {
+    text-decoration: none;
+  }
+  .list-btn {
+      display: flex;
+      justify-content: center;
+      align-content: center;
+      margin: -60px 0 0 -730px;
+      padding: 12px;
+      width: 227px;
+      height: 64px;
+      transition: .5s ease;
+  }
+  .bttv-emotes {
+    z-index: -1;
+    position: relative;
+    width: 10px;
+    animation: memes infinite alternate 7s;
+  }
+  .img-container img{
+    position: relative;
+    width: 50px;
+    height: 50px;
+  }
+  .m1 {
+    animation: sim1 infinite alternate .4s;
+  }
+  
+  .m2 {
+    animation: sim2 infinite alternate .4s;
+  }
+  
+  @keyframes memes {
+    0% {
+        top: -600px;
+        left: -500px;
+    }
+    45% { 
+      rotate: 20deg;
+      top: -325px;
+      left: 300px;
+    }
+    65% {
+      rotate: -20deg;
+      top: -325px;
+      left: 300px;
+    }
+    100%{
+      top: 600px;
+      left: -500px;
+    }
+  }
+  
+  @keyframes sim1 {
+    0% {
+      top: 10px;
+    }
+    100% {
+      top: -10px;
+    }
+  }
+  @keyframes sim2 {
+    0% {
+      top: -10px;
+    }
+    100% {
+      top: 10px;
+    }
+  }
+  
+  /* List */
+  
+  #title-list {
+    position: relative;
+    top: 41px;
+    left: 89.5px;
+  }
+  
+  .line {
+    position: relative;
+    top: 40px;
+    left: 52.5px;
+    width: 300px;
+    height: 2px;
+  }
+  
+  .table {
+    position: relative;
+    left: 30px;
+    top: 50px;
+  }
+  .delete-btn {
+    position: relative;
+    left: 300px;
+    top: -112px;
+  }
+  
+  .meme-list {
+    margin: 25px 0;
+    padding: 12px 0 0 0;
+    width: 345px;
+    height: 96px;
+    background-color: #E6E6E6;
+    border-radius: 10px;
+    font-feature-settings: 'clig' off, 'liga' off;
+    font-family: Inter;
+    font-size: 22px;
+    font-style: normal;
+    font-weight: 300;
+  }
+  
+  .meme-list .col2 {
+    font-size: 26px;
+    display: inline;
+    padding: 0 0 0 136px;
+    position: relative;
+    top: -85px;
+    left: 16px;
+  }
+  
+  .meme-list a {
+    text-decoration: none;
+    color: #000;
+  }
+  
+  /* vid list */
+  .col .testes {
+    position: relative;
+    top: -12px;
+    left: 0px;
+  }
+
+  /* show */
+
+  .youtube-meme {
+    height: 200px;
+    width: 350px;
+  }
+  
+  /* create */
+  .texto3{
+    left: 18px;
+  }
+  .texto4{
+    left: 18px;
+  }
+  .linkName{
+    left: 18px;
+  }
+  .link{
+    left: 18px;
+  }
+
+  .nomeMeme {
+    left: 15px;
+    width: 300px;
+  }
+
+  .pesquisa {
+    left: 15px;
+    width: 300px;
+  }
+}
